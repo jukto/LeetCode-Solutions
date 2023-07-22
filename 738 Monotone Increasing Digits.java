@@ -3,15 +3,11 @@ class Solution {
 
     public int monotoneIncreasingDigits(int n) {
         for (int i = 0; i < 9; i++) {
-            while (getDigit(n, i + 1) > getDigit(n, i)) {
+            while ((n / powersOfTen[i + 1]) % 10 > (n / powersOfTen[i]) % 10) {
                 n -= (n % powersOfTen[i]) + 1;
             }
         }
 
         return n;
-    }
-
-    private static int getDigit(int num, int digit) {
-        return (num / powersOfTen[digit]) % 10;
     }
 }
