@@ -1,3 +1,5 @@
+//    Problem : https://leetcode.com/problems/maximum-running-time-of-n-computers/description/
+
 class Solution {
     public long maxRunTime(int n, int[] batteries) {
         // The maximum *potential* runtime is achieved when the total power is divided equally among the computers.
@@ -23,7 +25,7 @@ class Solution {
     /**
         Find the maximum possible runtime provided by [batteries], assuming that each battery can provide a maximum
         of [time], and then check if that is enough to run [n] computers for that long.
-    **/
+     */
     private boolean canRun(long time, int[] batteries, int n) {
         long runTime = 0;
 
