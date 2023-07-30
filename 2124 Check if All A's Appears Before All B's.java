@@ -1,4 +1,4 @@
-//  Problem: https://leetcode.com/problems/check-if-all-as-appears-before-all-bs/submissions/
+//  Problem: https://leetcode.com/problems/check-if-all-as-appears-before-all-bs/description/
 
 class Solution {
     public boolean checkString(String s) {
