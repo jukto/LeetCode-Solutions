@@ -1,4 +1,4 @@
-//  Problem: https://leetcode.com/problems/strange-printer/submissions/
+//  Problem: https://leetcode.com/problems/strange-printer/description/
 
 class Solution {
     public int strangePrinter(String s) {
