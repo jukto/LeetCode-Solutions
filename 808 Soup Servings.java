@@ -1,4 +1,4 @@
-//  Problem: https://leetcode.com/problems/soup-servings/submissions/
+//  Problem: https://leetcode.com/problems/soup-servings/description/
 
 class Solution {
     private double[] cache = new double[26407];
