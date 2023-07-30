@@ -1,4 +1,4 @@
-//  Problem: https://leetcode.com/problems/positions-of-large-groups/submissions/
+//  Problem: https://leetcode.com/problems/positions-of-large-groups/description/
 
 class Solution {
     public List<List<Integer>> largeGroupPositions(String s) {
