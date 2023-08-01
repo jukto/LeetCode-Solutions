@@ -2,29 +2,19 @@
 
 class Solution {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
-        return recursion(new ArrayList<List<Integer>>(), candidates, new int[20], 0, target, 0);
+        return recursion(new ArrayList<List<Integer>>(), candidates, new Integer[20], 0, target, 0);
     }
 
-    private List<List<Integer>> recursion(List<List<Integer>> result, int[] candidates, int[] combination, int endex, int target, int index) {
+    private List<List<Integer>> recursion(List<List<Integer>> result, int[] candidates, Integer[] combo, int comboLength, int target, int index) {
         if (target <= 0) {
-            if (target == 0)
-                result.add( makeList(combination, endex) );
+            if (target == 0) result.add( Arrays.asList(Arrays.copyOf(combo, comboLength)) );
             return result;
         }
 
         for (int i = index; i < candidates.length; i++) {
-            combination[endex] = candidates[i];
-            recursion(result, candidates, combination, endex + 1, target - candidates[i], i);
+            combo[comboLength] = candidates[i];
+            recursion(result, candidates, combo, comboLength + 1, target - candidates[i], i);
         }
-        return result;
-    }
-
-    // Since candidates[i] has a minimum value of 2 and target has a maximum of 40, no combination will ever have more
-    // than 20 members. So we can use an array and a pointer to keep track of the current combination instead of a list.
-    private List<Integer> makeList(int[] array, int endex) {
-        var result = new ArrayList<Integer>(endex);
-        for (int i = 0; i < endex; i++)
-            result.add(array[i]);
         return result;
     }
 }
