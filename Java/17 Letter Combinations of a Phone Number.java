@@ -1,4 +1,4 @@
-//  Problem: https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/
+//  Problem: https://leetcode.com/problems/letter-combinations-of-a-phone-number/
 
 class Solution {
     public List<String> letterCombinations(String digits) {
